@@ -22,3 +22,5 @@ int view_inventory(sqlite3* db); // done
 int view_sales(sqlite3* db); // done
 int process_sale(sqlite3* db, int id, int quantity); // done
 void alert_for_low_stock(sqlite3* db);
+
+
