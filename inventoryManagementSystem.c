@@ -2,6 +2,7 @@
 #include "sqlite\sqlite3.h"
 #include "functions.h"
 #include "login.h"
+#include <string.h>
 
 
 int main() {
@@ -21,11 +22,9 @@ int main() {
 		return;
 	}
 	enter_login_details(&idNumber, password);
-	int input_idNumber = idNumber;
-	strcpy(input_password, password);
-	login_verification(db, input_idNumber, input_password);
-
-	main_menu(db);
+	login_verification(db, idNumber, password);
+	
+	
 	// Main Menu has all the functions and attributes needed to run this fucking program...
 }
 		
